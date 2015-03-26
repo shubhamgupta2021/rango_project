@@ -1,10 +1,10 @@
 from django.conf.urls import patterns, include, url
-from  rango.views import hello, about
+from  rango.views import index, about
 
 urlpatterns = patterns('',
 
 
-              url( r'^$', hello),
+              url( r'^$', index),
               url (r'^about', about)
 
 )
