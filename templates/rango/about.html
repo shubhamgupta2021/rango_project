@@ -1,15 +1,10 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html'%}
 
-{% load staticfiles %} <!-- New line -->
+{% load staticfiles %}
 
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
-<h1>Rango Says... </h1>
-<a href="/rango/">Index</a><br />
-<img src= "{% static 'images/nandi.jpg' %}" alt="nandi hills pictures"> <!-- New line -->
-</body>
-</html>
+{% block title_block%} About {% endblock %}
+
+{% block body_block%}
+    <h1>LinkFair</h1>
+    <a href="/linkfair/">Index</a><br />
+{% endblock %}

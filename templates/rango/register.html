@@ -1,0 +1,21 @@
+{% extends 'rango/base.html'%}
+
+{% load staticfiles %}
+
+{% block title_block%} Register {% endblock %}
+
+{% block body_block%}
+    <h1>Register at LinkFair</h1>
+    {% if registered %}
+        Registered Successfully. Click <a href=" /linkfair/login/">here</a> to login.
+    {% else %}
+        <form name="registration form" action="/linkfair/register/" method="post"  enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            {{user_form.as_p }}
+            {{profile_form.as_p}}
+            <input type="submit" name="Submit" value="Register" />
+        </form>
+    {% endif %}
+{% endblock %}
