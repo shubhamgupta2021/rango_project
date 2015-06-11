@@ -1,0 +1,14 @@
+{% extends 'rango/base.html'%}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block title_block%} Login {% endblock %}
+
+{% block body_block%}
+    <h1>Login</h1>
+    <form name="login_form" action="/linkfair/login/" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons submit='OK' reset='Cancel'%}{% endbuttons %}
+    </form>
+{% endblock %}
